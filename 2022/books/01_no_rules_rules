@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <style>
+            .colortext {
+                color: #810000; /* Красный цвет выделения */
+            }
+
+            P {
+                text-align: justify; /* Выравнивание по ширине */
+            }
+            h1 {
+                color: #184d47;
+                font: 35px Roboto, sans-serif;
+            }
+            h2 {
+                color: #810000;
+                font: 32px Roboto, sans-serif;
+            }
+            h3 {
+                color: #810000;
+                font: 28px Roboto, sans-serif;
+            }
+            h4 {
+                color: #31112c;
+                font: 20px Roboto, Monospace;
+            }
+            blink {
+                color: #31112c
+                font: 20px Roboto, Monospace;
+            }
+            body {
+                background: #f6f6f6;
+                font: 20px Roboto, Monospace;
+                margin-right: 20%; /* Отступ справа */
+                margin-left: 20%; /* Отступ слева */
+            }
+
+            /* unvisited link */
+            a:link {
+                color: green;
+            }
+            /* visited link */
+            a:visited {
+                color: darkgreen;
+            }
+            
+            
+            /* Header style */
+            
+
+            @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+            .menu-main {
+                list-style: none;
+                margin: 0px 0 0px;
+                padding: 25px 0 5px;
+                text-align: center;
+                background: white;
+            }
+            .menu-main li {display: inline-block;}
+            .menu-main li:after {
+                content: "|";
+                color: #606060;
+                display: inline-block;
+                vertical-align:top;
+            }
+            .menu-main li:last-child:after {content: none;}
+            .menu-main a {
+                text-decoration: none;
+                font-family: 'Ubuntu Condensed', sans-serif;
+                letter-spacing: 2px;
+                position: relative;
+                padding-bottom: 20px;
+                margin: 0 70px 0 70px;
+                font-size: 17px;
+                text-transform: uppercase;
+                display: inline-block;
+                transition: color .2s;
+            }
+            .menu-main a, .menu-main a:visited {color: #9d999d;}
+            .menu-main a.current, .menu-main a:hover{color: #feb386;}
+            .menu-main a:before,
+            .menu-main a:after {
+                content: "";
+                position: absolute;
+                height: 4px;
+                top: auto;
+                right: 50%;
+                bottom: -5px;
+                left: 50%;
+                background: #feb386;
+                transition: .8s;
+            }
+            .menu-main a:hover:before, .menu-main .current:before {left: 0;}
+            .menu-main a:hover:after, .menu-main .current:after {right: 0;}
+            @media (max-width: 550px) {
+                .menu-main {padding-top: 0;}
+                .menu-main li {display: block;}
+                .menu-main li:after {content: none;}
+                .menu-main a {
+                    padding: 25px 0 20px; 
+                    margin: 0 30px;
+                }
+            }
+            
+            /* End header style */
+
+            
+            article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+                display:block
+            }
+
+            html {
+                font-size: 19px;
+                line-height:1.4
+            }
+
+            @media screen and (max-width: 767px) {
+                html {
+                    font-size:16px
+                }
+            }
+
+
+            /* Часть для корректного отображения заголовка страницы */
+
+            .home-section .home-section-title {
+                margin:0 0 1rem 0
+            }
+            /* Конец части для корректного отображения заголовка страницы */
+
+
+            /* Часть для корректного отображения списка статей */
+
+            body.article article.draft {
+                background-color:transparent
+            }
+
+            body.article article.draft > header {
+                background-color:#ffffa3
+            }
+
+            body.article article.draft > footer {
+                background-color:#ffffa3
+            }
+
+            
+
+            .home-section .home-section-content .home-section-content-article-list {
+                list-style: none;
+                margin: 0;
+                padding:0
+            }
+
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item {
+                margin:0 0 1.6rem 0
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item > article {
+                display: flex;
+                flex-flow: row wrap;
+                align-items:baseline
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-title {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0.2rem 0.8rem 0 0;
+                order:1
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt {
+                flex: 1 1 100%;
+                font-size: 1rem;
+                order: 3;
+                margin:0
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link {
+                color: #6b6b6b;
+                font-size: 0.85rem;
+                text-transform:uppercase
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link:hover, .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link:active {
+                background-color: transparent;
+                color:#2e89ff
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link:hover *, .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link:active * {
+                color:#2e89ff
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link:hover img, .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-excerpt .article-excerpt-more-link:active img {
+                background-color:transparent
+            }
+
+            .home-section .home-section-content .home-section-content-article-list .home-section-content-article-list-item .home-section-content-article-list-item-date {
+                order: 2;
+                font-size: 1rem;
+                margin: 0;
+                color: #6b6b6b;
+                font-weight:400
+            }
+
+
+            body.archive main.content-container > section > header > h1 {
+                display: inline-block;
+                font-size: 1.8rem;
+                font-weight: 300;
+                margin:0 0.8rem 0.25rem 0
+            }
+
+            body.archive main.content-container > section > header div.metadata {
+                display: inline-block;
+                color: #6b6b6b;
+                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 1.1rem;
+                margin:0
+            }
+
+            body.archive main.content-container > section > header div.metadata > p {
+                margin:0
+            }
+
+            body.archive main.content-container > section > ol.years {
+                list-style: none;
+                padding:0
+            }
+
+            body.archive main.content-container > section > ol.years > li {
+                margin:3.2rem 0
+            }
+
+            body.archive main.content-container > section > ol.years > li > h1 {
+                color: rgba(0, 0, 0, 0.8);
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin: 0;
+                padding:0
+            }
+
+            body.archive main.content-container > section > ol.years > li > ol.articles {
+                list-style: none;
+                margin: 0;
+                padding:0
+            }
+
+            body.archive main.content-container > section > ol.years > li > ol.articles > li {
+                margin: 0.6rem 0;
+                padding:0
+            }
+
+            body.archive main.content-container > section > ol.years > li > ol.articles > li article {
+                align-items: baseline;
+                display: flex;
+                flex-flow: row wrap;
+                margin:0.2rem 0
+            }
+
+            body.archive main.content-container > section > ol.years > li > ol.articles > li article > a > div.title > h1 {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.3rem;
+                margin: 0;
+                padding:0 0.8rem 0 0
+            }
+
+            body.archive main.content-container > section > ol.years > li > ol.articles > li article > div.date {
+                color: #6b6b6b;
+                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 0.9rem;
+                margin: 0 1em 0 0;
+                text-align:right
+            }
+
+            /* Конец части для корректного отображения заголовков статей */
+
+
+            /* Отображение статьи */
+        
+
+            author {
+                color: red;
+                font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 0.9rem;
+                margin: 0 1em 0 0;
+                text-align:right
+            }
+
+            /* Конец отображение статьи */
+
+        </style>
+        
+        <!-- Use the title from a page's frontmatter if it has one -->
+        <link href="/images/logo.png" rel="icon" type="image/png" />
+
+        <div class="header-bar">
+            <div class="site-id">
+                <h1><span class="active">Alsu LABS</span></h1>
+                <h4>Блог о мобильной разработке, книгах и размышления о жизни.</h4>
+            </div>
+            <ul class="menu-main">
+                <li><a href="development.html" class="site">Разработка </a></li>
+                <li><a href="books.html" class="site">Книги</a></li>
+                <li><a href="experience.html" class="site">Опыт</a></li>
+            </ul>
+        </div>
+        
+        <title>Alsu Labs</title>
+        <link href="/stylesheets/style.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <main class="content-container">
+  <article>
+    <header>
+      <h1>No rules rules. Или о культуре в Netflix</h1>
+    </header>
+
+    <footer>
+      <div class="metadata">
+          <p class="author">
+            By Alsu Bikkulova / Март 22, 2022
+          </p>
+      </div>
+    </footer>
+
+    <div class="article-content">
+        Если вы не знаете с чего разжечь огонь в вашем книжном клубе - смело берите эту книгу. Она настолько умело противоречит обычным нормам, что после ты вроде узнал много нового, но осталось миллион вопросов. Как измерять "концентрат таланта" в реальной жизни? Действительно ли культура "команды" лучше "семейной" в компании? А как попасть в Netflix?<br><br>
+Сотрудники дают почитать книгу начальнику с мыслями "он же не станет увольнять меня, потому что решит, что я не в концентрате таланта?". 
+Начальники рекомендуют её в своем отделе, думая "они же не попросят повысить всем зарплаты по верхней границе рынка, как в Netflix?"
+А такие как я тихо восхищаются, потому что культура постоянной адекватной обратной связи вкупе с сохранением концентрата таланта реально мотивирует так же великолепно работать. Бездельники демотивируют - не понимаешь, зачем работать хорошо, если вон тот парень успевает еще в носу поковыряться за зп в 2 раза выше? Но никогда не думала, что это не только мои мысли и реакция - эффективность ВСЕЙ команды на 30% ниже (1 бездельник - очень дорогое удовольствие).<br><br>
+Только правда, сплошной холивар - все в книге No rules rules.
+      </div>
+    </article>
+<br>
+</main>
+
+    </body>
+</html>
